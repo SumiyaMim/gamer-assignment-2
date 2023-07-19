@@ -84,14 +84,20 @@ header{
 .follow{
     display: flex;
     justify-content: space-around;
-    gap: 14px;
+    gap: 20px;
     align-items: center;
     border-radius: 8px;
-    background: rgba(11, 2, 35, 0.10);
-    padding: 10px 20px;
+    background-color: rgba(11, 2, 35, 0.10);
+    padding: 8px 0 8px 20px;
 }
 .fa-youtube{
     color: red;
+}
+.nav-icon{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-icon i{
     font-size: 20px;
 }
 
