@@ -232,7 +232,9 @@ header{
     flex-wrap: wrap;
     justify-content: center; 
     gap: 12px;
-    padding: 10px 130px;
+    padding: 100px 130px;
+    background-color: rgba(255, 66, 165, 0.03);
+    margin-top: -100px;
 }
 .game-content{
     display: flex;
@@ -259,9 +261,6 @@ header{
 }
 
 /* footer section */
-footer{
-    margin-top: 100px;
-}
 .footer-container{
     background-color: #0B0223;
     padding: 80px 50px;
@@ -407,7 +406,7 @@ footer{
     .games-container{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        padding: 10px;
+        padding: 50px 10px;
         row-gap: 5px;
         column-gap: 10px;
     }
@@ -509,7 +508,7 @@ footer{
     .games-container{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        padding: 10px 80px;
+        padding: 70px 80px;
     }
     .game-content img{
         width: 30px;
