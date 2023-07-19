@@ -192,31 +192,6 @@ header{
     font-weight: 600;
     color: var(--primary-color);
 }
-/* .online-content:hover::before{
-    content: "";
-    background-image: url('/images/play-button.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1; 
-}
-.online-content:hover::after{
-    content: 'Watch Now';
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-} */
 
 /* play section */
 .play-container{
@@ -304,7 +279,7 @@ footer{
     align-items: center;
     width: 45%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 40px 0 20px;
 }
 .footer-item li{
     list-style: none;
