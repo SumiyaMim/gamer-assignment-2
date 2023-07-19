@@ -12,8 +12,17 @@
     --secondary-color: #3C354F;
     --tertiary-color: #8758F1;
 }
+.g-color{
+    color: var(--primary-color);
+}
 .gradient-font{
     background: linear-gradient(180deg, #FF42A5 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient-font-two{
+    background: linear-gradient(180deg, #FF42A5 20%, #8758F1 200%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -28,7 +37,15 @@
     font-size: 1rem;
     border: 0;
 }
-
+.title{
+    font-size: 1.8rem;
+}
+.description{
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: #534C64;
+    margin-top: 10px;
+}
 
 /* nav section */
 header{
@@ -44,9 +61,6 @@ header{
     display: flex;
     align-items: center;
     gap: 10px;
-}
-.g-color{
-    color: var(--primary-color);
 }
 .logo-container img{
     width: 50px;
@@ -128,9 +142,216 @@ header{
     background-color: #4EC5F7;
 }
 
+/* online section */
+.online-container{
+    padding: 80px 170px;
+}
+.online-header{
+    text-align: center;
+}
+.online-contents{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+}
+.online-content .rectangle-img{
+    width: 215px;
+    border: 3px solid transparent;
+}
+.online-content{
+    width: 215px;
+    position: relative;
+}
+.online-content p{
+    font-weight: 500;
+    color: #534C64;
+    font-size: 0.8rem;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+.hover-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 83.3%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.hover-container:hover{
+    opacity: 1;
+    border: 3px solid var(--primary-color);
+    border-radius: 13px;
+}
+.hover-container p{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+/* .online-content:hover::before{
+    content: "";
+    background-image: url('/images/play-button.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1; 
+}
+.online-content:hover::after{
+    content: 'Watch Now';
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+} */
+
+/* play section */
+.play-container{
+    padding: 20px 0 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 200px;
+}
+.play-content{
+    width: 18%;
+    text-align: right;
+    margin-bottom: 200px;
+}
+.play-img img{
+    width: 70%;
+}
+.play-second-img img{
+    width: 30%;
+    position: relative;
+    bottom: 170px;
+    right: 90px;
+}
+.play-desc{
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+/* games section */
+.games-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 12px;
+    padding: 10px 130px;
+}
+.game-content{
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    width: 0 auto;
+    width: 190px;
+    border: 1.5px solid transparent;
+}
+.game-content img{
+    width: 35px;
+}
+.game-content p{
+    font-weight: 600;
+    font-size: 0.73rem;
+}
+.game-content:hover{
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+    overflow: hidden; 
+}
+
+/* footer section */
+footer{
+    margin-top: 100px;
+}
+.footer-container{
+    background-color: #0B0223;
+    padding: 80px 50px;
+    color: white;
+    text-align: center;
+}
+.footer-logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+.footer-logo-container img{
+    width: 50px;
+    height: 25px;
+}
+.footer-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.footer-item li{
+    list-style: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+.footer-privacy{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.footer-privacy li{
+    list-style: none;
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.60);
+}
+.footer-container p{
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.60);
+}
+.footer-icon{
+    padding: 10px 0 20px;
+    display: flex;
+    justify-content: center;
+}
+.fa-brands{
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+.footer-icon button{
+    color: white;
+    background-color: transparent;
+    border: 0;
+}
+.footer-icon button:hover{
+    color: var(--primary-color);
+}
+
 /* responsive */
 @media screen and (max-width: 576px){
-    .nav-container, .nav-items{
+    .nav-container, .nav-items, .play-container{
         flex-direction: column;
     }
     .logo-container{
@@ -158,9 +379,82 @@ header{
     .banner-content{
         padding: 60px 0; 
     }
+    .online-container{
+        padding: 80px 25px;
+    }
+    .online-contents{
+        grid-template-columns: 1fr;
+        gap: 25px;
+        align-items: center;
+    }
+    .online-content{
+        width: 100%;
+    }
+    .online-content .rectangle-img{
+        width: 100%;  
+    }
+    .online-content p{
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    .hover-container{
+        height: 93.8%;
+    }
+    .hover-container:hover{
+        border-radius: 20px;
+    }
+    .play-container{
+        gap: 40px;
+    }
+    .play-content{
+        width: 55%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .play-img{
+        margin-left: 110px;
+    }
+    .play-img img{
+        width: 80%;
+    }
+    .play-second-img img{
+        width: 30%;
+        margin-top: 90px;
+        margin-left: 45px;
+    } 
+    .games-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px;
+    }
+    .game-content{
+        width: 100%;
+    }
+    .game-content img{
+        width: 25px;
+    }
+    .game-content p{
+        font-size: 0.6rem;
+    }
+    .footer-item{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        row-gap: 20px;
+    }
+    .footer-privacy{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        row-gap: 20px;
+    }
+    .footer-container p{
+        margin-top: 30px;
+    }
 }
+
 @media screen and (min-width: 576px) and (max-width: 992px){
-    .nav-container{
+    .nav-container, .play-container{
         flex-direction: column;
     }
     .logo-container{
@@ -187,5 +481,60 @@ header{
     }
     .banner-content{
         padding: 60px 0; 
+    }
+    .online-container{
+        padding: 80px 25px;
+    }
+    .online-contents{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    .online-content{
+        width: 100%;
+    }
+    .online-content .rectangle-img{
+        width: 100%;
+    }
+    .hover-container{
+        height: 74%;
+    }
+    .hover-container:hover{
+        border-radius: 16px;
+    }
+    .play-container{
+        gap: 40px;
+    }
+    .play-content{
+        width: 55%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .play-img{
+        margin-left: 200px;
+    }
+    .play-img img{
+        width: 80%;
+    }
+    .play-second-img img{
+        width: 30%;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+    .games-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px 80px;
+    }
+    .game-content img{
+        width: 30px;
+    }
+    .game-content p{
+        font-size: 0.7rem;
+    }
+    .footer-item{
+        width: 80%;
+    }
+    .footer-privacy{
+        width: 80%;
     }
 }
